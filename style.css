@@ -1,0 +1,121 @@
+header{
+    position:fixed;
+    height:100px;
+    width: 100%;
+    background-color: brown;
+    display:flex;
+    align-items: center;
+    top:0;
+    left:0;
+   z-index: 3;
+  
+}
+label{
+    position: fixed;
+    display:none;
+    height:39px;
+    width:40px;
+    background-color: brown;
+    top:5%;
+    left:1%;
+    z-index: 3;
+
+}
+.content{
+    padding: 100px;
+}
+.line{
+    position:absolute;
+    height:3px;
+    width:40px;
+    background-color:white;
+    top:18px;
+    left:0;
+    transition-duration: 500ms;
+}
+label span:nth-child(1){
+top:0px;
+}
+label span:nth-child(4){
+    top:36px
+}
+.burger-menu{
+   position: fixed;
+   display: flex;
+   margin-top:90px;
+   padding-bottom:300%; 
+   height: 100vh;
+   width:100%;
+   left: 0;
+   justify-content: center;
+   align-items: center;
+   background-color:teal; 
+   flex-direction: column;
+   transition-duration: 500ms;
+   transform: translateY(-100%); 
+}
+.burger-menu-content{
+    background-color:teal;
+    height:100%;
+
+}
+.menu-item-burger{
+    font-size: 25px;
+    height:20px;
+    display: flex;
+    margin-top:70%;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    color:whitesmoke;
+}
+
+.menu-item-burger:hover{
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+#style:checked ~ label span:nth-child(1){
+    transform: scale(0);   
+}
+#style:checked ~ label span:nth-child(4){
+    transform: scale(0);   
+}
+#style:checked ~ label span:nth-child(3){
+    transform: rotate(45deg);   
+}
+#style:checked ~ label span:nth-child(2){
+    transform: rotate(-45deg);   
+}
+#style:checked ~ .burger-menu{
+     transform: translateY(-0%);
+}
+.header-menu{
+display:flex;
+
+
+margin-left: 30%;
+}
+.menu-item{
+    padding-left:60px;
+    font-size: 20px;
+    color: whitesmoke;
+    font-family:Arial;
+}
+
+
+#style{
+    display:none
+}
+@media (max-width:967px){
+    .header-menu{
+        display:none;
+        
+    }
+    label{
+        display:block;
+        
+    }
+   
+}
+
+
